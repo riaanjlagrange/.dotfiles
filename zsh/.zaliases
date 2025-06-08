@@ -1,0 +1,3 @@
+alias vim="nvim"
+alias projects="cd ~/projects && ls"
+alias notes="cd ~/Dropbox/Notes/ && nvim ."
