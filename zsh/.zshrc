@@ -11,6 +11,13 @@ fi
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+    exec Hyprland
+fi
+
+export TMOUT=1800
+readonly TMOUT
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -79,7 +86,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo history encode64 copypath zsh-autosuggestions zsh-syntax-highlighting zsh-github-copilot emoji)
+plugins=(git sudo history encode64 copypath zsh-autosuggestions zsh-syntax-highlighting zsh-github-copilot emoji zoxide zsh-vi-mode fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -134,3 +141,4 @@ esac
 export PATH="$PATH:/home/riaan/.local/bin"
 
 eval "$(starship init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
