@@ -142,3 +142,6 @@ export PATH="$PATH:/home/riaan/.local/bin"
 
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
