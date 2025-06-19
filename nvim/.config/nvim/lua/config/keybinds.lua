@@ -3,11 +3,11 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)
 
-vim.keymap.set("n", "<leader>np", function()
+vim.keymap.set("n", "<leader>nd", function()
     vim.cmd("ObsidianToday")
 end, { desc = "Obsidian: Open Daily Note" })
 
-vim.keymap.set("n", "<leader>nw", function()
+vim.keymap.set("n", "<leader>nn", function()
     vim.ui.input({ prompt = "New note title: " }, function(input)
         if input then
             vim.cmd("ObsidianNew " .. input)
