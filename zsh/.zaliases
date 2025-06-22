@@ -1,6 +1,7 @@
 alias vim="nvim"
 alias projects="cd ~/projects && ls"
-alias notes="cd ~/Dropbox/Notes && nvim ."
+alias notes="tmux a -t notes"
+alias buss="tmux a -t buss"
 alias fman="compgen -c | fzf | xargs man"
 alias ls="eza"
 alias ll="eza -lah"
