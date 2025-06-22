@@ -18,6 +18,12 @@ vim.keymap.set("n", "<leader>nt", function()
     vim.cmd("ObsidianTomorrow")
 end, { desc = "Obsidian: Open Tomorrow's Daily Note" })
 
+-- Insert template
+vim.keymap.set("n", "<leader>nft", function()
+    vim.cmd("ObsidianTemplate")
+end, { desc = "Insert Template" })
+
+-- Create a new note
 vim.keymap.set("n", "<leader>nn", function()
     vim.ui.input({ prompt = "New note title: " }, function(input)
         if input then
