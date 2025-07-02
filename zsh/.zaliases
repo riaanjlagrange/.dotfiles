@@ -1,4 +1,5 @@
 alias vim="nvim"
+alias phpdir="cd /var/www/html/"
 alias projects="cd ~/projects && ls"
 alias notes="tmux a -t notes"
 alias buss="tmux a -t buss"
@@ -7,3 +8,4 @@ alias ls="eza"
 alias ll="eza -lah"
 alias cat="batcat"
 alias grep="rg"
+
