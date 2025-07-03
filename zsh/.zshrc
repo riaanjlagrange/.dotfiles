@@ -15,8 +15,8 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     exec Hyprland
 fi
 
-export TMOUT=1800
-readonly TMOUT
+# export TMOUT=1800
+# readonly TMOUT
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -145,3 +145,16 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+# Flutter and Dart
+export FLUTTER_HOME=/home/riaan/flutter
+export PATH="$PATH:$FLUTTER_HOME/bin"
+
+# Android SDK
+export ANDROID_SDK_ROOT=/home/riaan/android-sdk
+export ANDROID_HOME=$ANDROID_SDK_ROOT
+export PATH="$PATH:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/latest/bin"
+
+export PATH="$HOME/flutter/bin:$HOME/flutter/bin/cache/dart-sdk/bin:$PATH"
+
+
