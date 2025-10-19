@@ -6,6 +6,6 @@ alias buss="tmux a -t buss"
 alias fman="compgen -c | fzf | xargs man"
 alias ls="eza"
 alias ll="eza -lah"
-alias cat="batcat"
+alias cat="bat"
 alias grep="rg"
 

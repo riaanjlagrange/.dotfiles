@@ -21,7 +21,7 @@ return {
         workspaces = {
             {
                 name = 'Notes',
-                path = vim.fn.expand '~/Dropbox/Notes',
+                path = vim.fn.expand '~/Notes/notes',
                 overrides = {
                     notes_subdir = 'notes',
                 },
