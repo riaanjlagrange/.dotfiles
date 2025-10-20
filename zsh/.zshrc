@@ -158,3 +158,5 @@ export PATH="$PATH:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$
 export PATH="$HOME/flutter/bin:$HOME/flutter/bin/cache/dart-sdk/bin:$PATH"
 
 export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+eval $(thefuck --alias)
