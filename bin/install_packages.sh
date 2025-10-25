@@ -89,6 +89,12 @@ setup_ssh() {
     fi
 }
 
+install_aur_packages() {
+    echo "📦 Installing extra AUR packages..."
+    yay -S --noconfirm --needed \
+      ttf-joypixels
+}
+
 # === MAIN ===
 echo "Arch Linux setup — base system configuration"
 sleep 1
@@ -97,5 +103,8 @@ install_yay
 install_packages
 setup_docker
 setup_ssh
+install_aur_packages
+
+
 
 echo "packages installed..."
