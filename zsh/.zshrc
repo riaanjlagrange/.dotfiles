@@ -86,7 +86,7 @@ fi
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo history encode64 copypath zsh-autosuggestions zsh-syntax-highlighting zsh-github-copilot emoji zoxide zsh-vi-mode fzf)
+plugins=(git sudo history encode64 copypath zsh-autosuggestions zsh-syntax-highlighting emoji zoxide zsh-vi-mode fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -177,7 +177,6 @@ fi
 
 
 # Welcome message
-#
 
 echo -e "\033[1;36m
 /////////////////////////////////////
