@@ -1,0 +1,12 @@
+allow_images=true
+allow_markup=true
+show_all=true
+term=alacritty
+prompt=Search...
+insensitive=true
+width=600
+height=400
+location=center
+columns=1
+orientation=vertical
+hide_scroll=true
