@@ -147,16 +147,48 @@ eval "$(zoxide init --cmd cd zsh)"
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 # Flutter and Dart
-export FLUTTER_HOME=/home/riaan/flutter
-export PATH="$PATH:$FLUTTER_HOME/bin"
+export FLUTTER_HOME=$HOME/flutter
+export PATH="$PATH:$FLUTTER_HOME/bin:$FLUTTER_HOME/bin/cache/dart-sdk/bin"
 
 # Android SDK
-export ANDROID_SDK_ROOT=/home/riaan/android-sdk
-export ANDROID_HOME=$ANDROID_SDK_ROOT
-export PATH="$PATH:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/latest/bin"
+export ANDROID_HOME=$HOME/Android/Sdk
+export ANDROID_SDK_ROOT=$ANDROID_HOME
+export ANDROID_SDK_HOME=$HOME
+export ANDROID_AVD_HOME=$HOME/.android/avd
+export PATH="$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin"
 
-export PATH="$HOME/flutter/bin:$HOME/flutter/bin/cache/dart-sdk/bin:$PATH"
+# Java
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+export PATH=$PATH:$JAVA_HOME/bin
+
 
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 eval $(thefuck --alias)
+
+export CHROME_EXECUTABLE=/opt/google/chrome/google-chrome
+
+# autostart tmux
+
+if ! pgrep -x "tmux" > /dev/null; then
+    tmux start-server >/dev/null 2>&1
+    tmux new-session -d -s autostart >/dev/null 2>&1
+fi
+
+
+# Welcome message
+#
+
+echo -e "\033[1;36m
+/////////////////////////////////////
+=====================================
+   welcome back $USER
+   today is $(date +"%A, %B %d")
+=====================================
+/////////////////////////////////////
+
+Available tmux sessions:
+\033[0m"
+sleep 1
+tmux ls
+
