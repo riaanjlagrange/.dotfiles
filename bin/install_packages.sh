@@ -33,6 +33,7 @@ PKGS=(
   fastfetch
   rsync
   openssh
+  lazygit
 
   # --- GUI apps & environment ---
   kitty
