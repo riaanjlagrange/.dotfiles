@@ -20,8 +20,8 @@ return {
     opts = {
         workspaces = {
             {
-                name = 'Notes',
-                path = vim.fn.expand '~/Notes/notes',
+                name = 'notes',
+                path = vim.fn.expand '~/notes',
                 overrides = {
                     notes_subdir = 'notes',
                 },
