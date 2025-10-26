@@ -6,7 +6,7 @@ HOST=$(cat /etc/hostname)
 # Output path for dynamic config
 DYN_CONF="$HOME/.config/hypr/hypr_dynamic.conf"
 
-if [[ "$HOST" == "mainarch" ]]; then
+if [[ "$HOST" == "arch-pc" ]]; then
     # On main PC, source monitors and workspaces
     cat > "$DYN_CONF" <<EOF
 source = $HOME/.config/hypr/monitors.conf
