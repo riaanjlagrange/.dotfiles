@@ -33,7 +33,10 @@ PKGS=(
   fastfetch
   rsync
   openssh
+  ffmpeg
+  mpv
   lazygit
+  jq
 
   # --- GUI apps & environment ---
   kitty
@@ -41,6 +44,8 @@ PKGS=(
   firefox
   waybar
   wofi
+  vlc
+  audacity
 
   # --- Dev tools ---
   gcc
