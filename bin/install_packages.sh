@@ -24,6 +24,7 @@ PKGS=(
   blueman
   networkmanager
   nmtui
+  pavucontrol
 
   # --- Terminal tools ---
   htop
