@@ -20,11 +20,14 @@ PKGS=(
   zsh
   tmux
   starship
+  swww
 
   # --- Terminal tools ---
   htop
   fzf
   ripgrep
+  zoxide
+  hypridle
   bat
   exa
   fd
@@ -34,6 +37,7 @@ PKGS=(
   rsync
   openssh
   ffmpeg
+  thefuck
   mpv
   lazygit
   jq
@@ -46,6 +50,7 @@ PKGS=(
   wofi
   vlc
   audacity
+  spotify-launcher
 
   # --- Dev tools ---
   gcc
@@ -97,7 +102,7 @@ setup_ssh() {
 install_aur_packages() {
     echo "📦 Installing extra AUR packages..."
     yay -S --noconfirm --needed \
-      ttf-joypixels
+      ttf-joypixels ttf-firacode-nerd
 }
 
 # === MAIN ===

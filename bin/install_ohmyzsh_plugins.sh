@@ -8,6 +8,7 @@ declare -A plugins=(
   [zsh-autosuggestions]="https://github.com/zsh-users/zsh-autosuggestions.git"
   [zsh-syntax-highlighting]="https://github.com/zsh-users/zsh-syntax-highlighting.git"
   [zsh-completions]="https://github.com/zsh-users/zsh-completions.git"
+  [zsh-vi-mode]="https://github.com/jeffreytse/zsh-vi-mode.git"
 )
 
 mkdir -p "$ZSH_CUSTOM"
