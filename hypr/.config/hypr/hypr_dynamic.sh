@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Determine the machine
-HOST=$(hostname)
+HOST=$(cat /etc/hostname)
 
 # Output path for dynamic config
 DYN_CONF="$HOME/.config/hypr/hypr_dynamic.conf"
