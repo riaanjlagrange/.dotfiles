@@ -25,6 +25,7 @@ PKGS=(
   networkmanager
   nmtui
   pavucontrol
+  emptty
 
   # --- Terminal tools ---
   htop
@@ -113,8 +114,8 @@ install_aur_packages() {
 echo "Arch Linux setup — base system configuration"
 sleep 1
 
-install_yay
 install_packages
+install_yay
 setup_docker
 setup_ssh
 install_aur_packages
