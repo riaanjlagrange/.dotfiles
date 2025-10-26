@@ -9,4 +9,5 @@ alias ll="eza -lah"
 alias cat="bat"
 alias grep="rg"
 alias sysmon="tmux attach -t sysmon"
+alias dotfiles="cd ~/.dotfiles/ && ll && gst"
 
