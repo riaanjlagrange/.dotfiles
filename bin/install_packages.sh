@@ -21,6 +21,9 @@ PKGS=(
   tmux
   starship
   swww
+  blueman
+  networkmanager
+  nmtui
 
   # --- Terminal tools ---
   htop
