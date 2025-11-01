@@ -1,7 +1,14 @@
 -- set default vim leader key
 
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)
+
+-- Toggle MiniFiles
+vim.keymap.set("n", "\\", function()
+    local mf = require('mini.files')
+    if not mf.close() then
+        mf.open(vim.api.nvim_buf_get_name(0))
+    end
+end, { desc = "Toggle MiniFiles" })
 
 -- Open yesterday note
 vim.keymap.set("n", "<leader>ny", function()
