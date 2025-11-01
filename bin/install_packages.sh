@@ -26,6 +26,8 @@ PKGS=(
   nmtui
   pavucontrol
   emptty
+  sl
+  tealdeer
 
   # --- Terminal tools ---
   htop
