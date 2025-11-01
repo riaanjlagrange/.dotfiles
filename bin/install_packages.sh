@@ -28,6 +28,7 @@ PKGS=(
   emptty
   sl
   tealdeer
+  wl-clipboard
 
   # --- Terminal tools ---
   htop

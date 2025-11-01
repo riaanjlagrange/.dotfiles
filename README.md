@@ -24,3 +24,4 @@ My personal dotfiles managed with GNU Stow.
 git clone https://github.com/riaanjlagrange/.dotfiles ~/.dotfiles
 ~/.dotfiles/bin/setup.sh
 ```
+
