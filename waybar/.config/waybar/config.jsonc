@@ -136,7 +136,7 @@
         },
         "format": "{icon}    {capacity}%",
         "format-full": "{icon}    {capacity}%",
-    "format": "{:%H:%M:%S  -  %A, %d %M}",
+	"format": "{:%H:%M:%S  -  %A, %d %M}",
         "format-charging": "   {capacity}%",
         "format-plugged": "   {capacity}%",
         "format-alt": "{icon}   {time}",

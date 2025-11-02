@@ -2,6 +2,11 @@
 
 vim.g.mapleader = " "
 
+-- Open minty color picker
+vim.keymap.set("n", "<leader>pc", function() -- pc = pick color
+    require("minty.shades").open({ border = false })
+end, { desc = "Open Minty color picker" })
+
 -- Toggle MiniFiles
 vim.keymap.set("n", "\\", function()
     local mf = require('mini.files')
