@@ -1,12 +1,25 @@
-allow_images=true
-allow_markup=true
-show_all=true
-term=alacritty
-prompt=Search...
-insensitive=true
-width=600
-height=400
-location=center
-columns=1
-orientation=vertical
-hide_scroll=true
+[wofi]
+# Window appearance
+width = 500
+height = 400
+location = center
+
+# List appearance
+line-height = 1.5
+font = "FiraCode Nerd Font"
+hide-cursor = false
+
+# Colors (light theme example)
+color-normal = #ffffff,#1e1e2e,#1e1e2e
+color-urgent = #ffffff,#ff5555,#1e1e2e
+color-active = #ffffff,#50fa7b,#1e1e2e
+
+# Behavior
+show-icons = false
+case-sensitive = false
+scroll-wrap = true
+
+# Commands
+# Optional: define a shell to run selected command
+command = /bin/sh -c "{}"
+
