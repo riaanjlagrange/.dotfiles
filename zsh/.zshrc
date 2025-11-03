@@ -178,17 +178,7 @@ fi
 
 # Welcome message
 
-echo -e "\033[1;36m
-/////////////////////////////////////
-=====================================
-   machine is $(cat /etc/hostname)
-   welcome back $USER
-   today is $(date +"%A, %B %d")
-=====================================
-/////////////////////////////////////
-
-Available tmux sessions:
-\033[0m"
+echo "Available tmux sessions:"
 sleep 1
 tmux ls
 
