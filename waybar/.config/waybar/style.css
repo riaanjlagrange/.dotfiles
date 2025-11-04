@@ -35,7 +35,7 @@
 #battery,
 #cpu,
 tooltip {
-  background-color: rgba(30, 30, 30, 0.8);
+  background-color: rgba(100, 100, 200, 0.8);
   padding: 0.3rem 0.8rem;
 }
 
@@ -62,7 +62,7 @@ tooltip {
 #memory:hover,
 #cpu:hover,
 tooltip {
-  background-color: rgba(50, 50, 50, 0.8);
+  background-color: rgba(130, 130, 230, 0.8);
 }
 
 
