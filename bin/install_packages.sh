@@ -29,6 +29,7 @@ PKGS=(
   sl
   tealdeer
   wl-clipboard
+  cliphist
 
   # --- Terminal tools ---
   htop
