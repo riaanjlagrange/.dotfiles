@@ -110,7 +110,7 @@ setup_ssh() {
 install_aur_packages() {
     echo "📦 Installing extra AUR packages..."
     yay -S --noconfirm --needed \
-      ttf-joypixels ttf-firacode-nerd google-chrome zen-browser-bin
+      ttf-joypixels ttf-firacode-nerd google-chrome zen-browser-bin wofi-emoji
 }
 
 # === MAIN ===
