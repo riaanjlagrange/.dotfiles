@@ -60,6 +60,7 @@ PKGS=(
   vlc
   audacity
   spotify-launcher
+  libreoffice-fresh
 
   # --- Dev tools ---
   gcc
