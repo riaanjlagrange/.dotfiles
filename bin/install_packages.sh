@@ -30,6 +30,7 @@ PKGS=(
   tealdeer
   wl-clipboard
   cliphist
+  earlyoom
 
   # --- Terminal tools ---
   htop
@@ -109,6 +110,10 @@ setup_ssh() {
     fi
 }
 
+enable_earlyoom() {
+  sudo systemctl enable --now earlyoom
+}
+
 install_aur_packages() {
     echo "📦 Installing extra AUR packages..."
     yay -S --noconfirm --needed \
@@ -123,6 +128,7 @@ install_packages
 install_yay
 setup_docker
 setup_ssh
+enable_earlyoom
 install_aur_packages
 
 
