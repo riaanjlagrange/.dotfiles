@@ -77,6 +77,10 @@ PKGS=(
   docker
   docker-compose
   github-cli
+
+  # --- hacker stuff ---
+  john
+  nmap
 )
 
 # === FUNCTIONS ===
