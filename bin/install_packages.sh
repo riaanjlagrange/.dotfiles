@@ -35,6 +35,7 @@ PKGS=(
   udiskie
   udisks2
   gvfs
+  dosfstools
 
   # --- Terminal tools ---
   htop
