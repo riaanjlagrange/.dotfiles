@@ -31,6 +31,10 @@ PKGS=(
   wl-clipboard
   cliphist
   earlyoom
+  inotify-tools
+  udiskie
+  udisks2
+  gvfs
 
   # --- Terminal tools ---
   htop
@@ -112,6 +116,10 @@ setup_ssh() {
 
 enable_earlyoom() {
   sudo systemctl enable --now earlyoom
+}
+
+enable_udisks2 () {
+  sudo systemctl enable --now udisks2
 }
 
 install_aur_packages() {

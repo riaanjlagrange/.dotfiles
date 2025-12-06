@@ -1,0 +1,9 @@
+program_options:
+  automount: true
+  notify: false
+  event_hook: "/home/riaan/scripts/usb-open-term.sh '{event}' '{mount_path}'"
+
+device_config:
+  - automount: true
+    ignore: false
+
