@@ -23,7 +23,6 @@ PKGS=(
   swww
   blueman
   networkmanager
-  nmtui
   pavucontrol
   emptty
   sl
@@ -46,7 +45,6 @@ PKGS=(
   bat
   exa
   fd
-  tldr
   tree
   fastfetch
   rsync
