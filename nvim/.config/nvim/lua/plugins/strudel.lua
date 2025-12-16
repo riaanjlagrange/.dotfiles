@@ -1,0 +1,39 @@
+return {
+    "gruvw/strudel.nvim",
+    build = "npm ci",
+    config = function()
+        require("strudel").setup({
+	    ui = {
+	      -- Maximise the menu panel
+	      -- (optional, default: true)
+	      maximise_menu_panel = true,
+	      -- Hide the Strudel menu panel (and handle)
+	      -- (optional, default: false)
+	      hide_menu_panel = false,
+	      -- Hide the default Strudel top bar (controls)
+	      -- (optional, default: false)
+	      hide_top_bar = false,
+	      -- Hide the Strudel code editor
+	      -- (optional, default: false)
+	      hide_code_editor = false,
+	      -- Hide the Strudel eval error display under the editor
+	      -- (optional, default: false)
+	      hide_error_display = false,
+	    },
+	    -- Automatically start playback when launching Strudel
+	    -- (optional, default: true)
+	    start_on_launch = true,
+	    -- Set to `true` to automatically trigger the code evaluation after saving the buffer content
+	    -- Only works if the playback was already started (doesn't start the playback on save)
+	    -- (optional, default: false)
+	    update_on_save = true,
+	    -- Enable two-way cursor position sync between Neovim and Strudel editor
+	    -- (optional, default: true)
+	    sync_cursor = true,
+	    -- Report evaluation errors from Strudel as Neovim notifications
+	    -- (optional, default: true)
+	    report_eval_errors = true,
+	    headless = false,
+	})
+    end,
+}
