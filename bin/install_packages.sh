@@ -128,7 +128,12 @@ enable_udisks2 () {
 install_aur_packages() {
     echo "📦 Installing extra AUR packages..."
     yay -S --noconfirm --needed \
-      ttf-joypixels ttf-firacode-nerd google-chrome zen-browser-bin wofi-emoji
+      ttf-joypixels \
+      ttf-firacode-nerd \
+      google-chrome \
+      zen-browser-bin \
+      wofi-emoji \
+      anki-bin
 }
 
 # === MAIN ===
@@ -141,7 +146,6 @@ setup_docker
 setup_ssh
 enable_earlyoom
 install_aur_packages
-
 
 
 echo "packages installed..."
