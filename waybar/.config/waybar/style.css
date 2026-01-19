@@ -33,13 +33,10 @@
 #network,
 #memory,
 #battery,
+#custom-power,
 #cpu,
 tooltip {
-  padding: 0 0.8rem;
-}
-
-#custom-power {
-  padding: 0.4rem 0.8rem;
+  padding: 0 0.5rem;
 }
 
 /* --- Left Modules (Individual, Fully Rounded Blocks - With Horizontal Spacing & Simple Hover) --- */
@@ -74,7 +71,6 @@ tooltip {
 }
 
 /* --- Center Module (Individual, Fully Rounded Block - With Simple Hover) --- */
-#custom-power,
 #clock {
   margin: 5px;
   min-width: 0;
@@ -87,19 +83,18 @@ tooltip {
 #custom-power {
   margin-right: 0;
   color: black;
-  border: 1px solid black;
 }
 
 #custom-power.performance {
-    background-color: #99ccff; /* pastel blue */
+    color: #04D9FF; /* pastel blue */
 }
 
 #custom-power.balanced {
-    background-color: #99ffff; /* pastel aqua */
+    color: #FDFD96; /* pastel yellow */
 }
 
 #custom-power.powersaver {
-    background-color: #ff9999; /* pastel red */
+    color: #ff9999; /* pastel red */
 }
 
 #custom-pomodoro {
@@ -208,6 +203,7 @@ tooltip {
 
 #clock {
   font-weight: 500;
+  color: #e78284;
 }
 
 #network.disconnected {

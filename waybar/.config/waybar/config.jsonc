@@ -10,7 +10,6 @@
 
   "modules-right": [
     "custom/nosleep",
-    "custom/wiki",
     "custom/power",
     "memory",
     "bluetooth",
@@ -66,9 +65,9 @@
   "clock": {
     "timezone": "Africa/Johannesburg",
     "tooltip-format": "Open Google Calendar",
-    "format": "{:%H:%M:%S  -  %A, %d %B}",
+    "format": "{:%H:%M:%S - %d/%m}",
     "interval": 1,
-    "on-click": "xdg-open https://calendar.google.com"
+    "on-click": "xdg-open https://calendar.google.com",
   },
 
   "network": {
@@ -93,6 +92,7 @@
     "on-click": "~/.config/waybar/scripts/power_mode.sh toggle",
     "interval": 5,
     "return-type": "json",
+    "tooltip-format": "Power Mode",
     "tooltip": true 
   },
 
@@ -145,19 +145,22 @@
   },
   
   "custom/lock": {
-  "tooltip": false,
-  "on-click": "hyprctl dispatch exit",
-  "format" : ""
+    "tooltip": true,
+    "on-click": "hyprctl dispatch exit",
+    "format" : "",
+    "tooltip-format": "Lock"
   },
   "custom/shutdown": {
-	"tooltip": false,
-	"on-click": "systemctl poweroff",
-	"format": ""
+    "tooltip": true,
+    "on-click": "systemctl poweroff",
+    "format": "",
+    "tooltip-format": "Shutdown"
   },
   "custom/restart": {
-	"tooltip": false,
-	"on-click": "systemctl reboot",
-	"format": ""
+    "tooltip": true,
+    "on-click": "systemctl reboot",
+    "format": "",
+    "tooltip-format": "Restart"
   },
 
     "custom/nosleep": {
