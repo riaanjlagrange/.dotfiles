@@ -10,7 +10,7 @@
 
 /* --- Waybar Container --- */
 #waybar {
-  background: black;
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   margin-bottom: 0px;
   font-weight: 500;
