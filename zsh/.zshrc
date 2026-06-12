@@ -15,6 +15,12 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     exec Hyprland
 fi
 
+
+# run project selector on start
+if [[ -z "$TMUX" ]] && [[ -n "$SSH_CONNECTION" ]]; then
+  bash ~/scripts/work-session.sh
+fi
+
 # export TMOUT=1800
 # readonly TMOUT
 
@@ -173,13 +179,6 @@ if ! pgrep -x "tmux" > /dev/null; then
     tmux start-server >/dev/null 2>&1
     tmux new-session -d -s autostart >/dev/null 2>&1
 fi
-
-
-# Welcome message
-
-echo "Available tmux sessions:"
-sleep 1
-tmux ls
 
 
 # The next line updates PATH for the Google Cloud SDK.
