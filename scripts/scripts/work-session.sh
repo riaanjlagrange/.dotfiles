@@ -20,10 +20,10 @@ PROJECTS=()
 
 # if there is a last project, the give the option to continue with it
 if [[ -n "$LAST_PROJECT" ]]; then
-  PROJECTS+=("CONTINUE::$LAST_PROJECT")
+  PROJECTS+=("//continue->$LAST_PROJECT")
 fi
 
-PROJECTS+=("NEW")
+PROJECTS+=("//new project")
 
 while IFS= read -r dir; do
   PROJECTS+=("$(basename "$dir")")
@@ -36,27 +36,30 @@ done < <(
     | sort
 )
 
-
 # handle selection
-
-# format list with fzf
 SELECTION=$(
-  printf '%s\n' "${PROJECTS[@]}" |
-    fzf \
-      --height=30% \
-      --border \
-      --prompt="> "
+  printf '%s\n' "${PROJECTS[@]}" | fzf \
+    --height=100% \
+    --border \
+    --prompt="  " \
+    --pointer="▶" \
+    --marker="✓" \
+    --header="select a project" \
+    --header-first \
+    --layout=reverse \
+    --color="border:#89b4fa,prompt:#cba6f7,pointer:#f38ba8" \
+    --bind='ctrl-c:abort,esc:abort' \
+    --no-info
 )
-
 
 [[ -z "$SELECTION" ]] && exit 0
 
 case "$SELECTION" in
-  "CONTINUE::"*)
-    PROJECT="${SELECTION#CONTINUE::}"
+  "//continue->"*)
+    PROJECT="${SELECTION#//continue->}"
     ;;
 
-  "NEW")
+  "//new project")
 
     read -rp "Project Name: " PROJECT
     read -rp "GitHub URL (optional): " REPO
