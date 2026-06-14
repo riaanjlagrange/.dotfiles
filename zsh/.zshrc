@@ -15,12 +15,6 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     exec Hyprland
 fi
 
-
-# run project selector on start
-if [[ -z "$TMUX" ]] && [[ -n "$SSH_CONNECTION" ]]; then
-  bash ~/scripts/work-session.sh
-fi
-
 # export TMOUT=1800
 # readonly TMOUT
 
