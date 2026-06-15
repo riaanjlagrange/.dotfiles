@@ -1,0 +1,9 @@
+[user]
+    name = Riaan la Grange
+    email = riaan@nexusit.dev
+
+[init]
+    defaultBranch = main
+
+[core]
+    sshCommand = ssh -i ~/.ssh/id_ed25519_work

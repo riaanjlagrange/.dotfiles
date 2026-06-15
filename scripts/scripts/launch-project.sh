@@ -31,14 +31,8 @@ if ! tmux has-session -t "$PROJECT" 2>/dev/null; then
 
   tmux send-keys \
     -t "$PROJECT" \
-    "nvim ." \
+    "nvim ./$PROJECT" \
     C-m
-
-  # create terminal window
-  tmux new-window \
-    -t "$PROJECT" \
-    -n cli \
-    -c "$PROJECT_DIR"
 
   # create notes window
   tmux new-window \
@@ -46,8 +40,36 @@ if ! tmux has-session -t "$PROJECT" 2>/dev/null; then
     -n notes \
     -c "$PROJECT_DIR" \
     "nvim notes.md"
+
+  # create git window (replaces cli)
+  tmux new-window \
+    -t "$PROJECT" \
+    -n git \
+    -c "$PROJECT_DIR"
+
+  # split vertically (creates left/right)
+  tmux split-window -h -t "$PROJECT":git \
+    -c "$PROJECT_DIR"
+
+  # split horizontally (creates top/bottom on right side)
+  tmux split-window -v -t "$PROJECT":git.1 \
+    -c "$PROJECT_DIR"
+
+  # make left pane (pane 0)
+  tmux select-pane -t "$PROJECT":git.0
+  tmux send-keys "cd $PROJECT && lazygit" C-m
+  tmux resize-pane -R 40
+
+  # ensure right panes are empty shells
+  tmux select-pane -t "$PROJECT":git.1
+  tmux send-keys "cd $PROJECT" C-m
+
+  tmux select-pane -t "$PROJECT":git.2
+  tmux send-keys "cd $PROJECT" C-m
+
 fi
 
 # attach to tmux session
 tmux select-window -t "$PROJECT":dev
 tmux attach -t "$PROJECT"
+

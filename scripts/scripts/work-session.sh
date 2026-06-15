@@ -64,7 +64,7 @@ case "$SELECTION" in
     read -rp "Project Name: " PROJECT
     read -rp "GitHub URL (optional): " REPO
 
-    mkdir -p "$PROJECT_ROOT/$PROJECT"
+    mkdir -p "$PROJECT_ROOT/$PROJECT/$PROJECT"
 
     if [[ -n "$REPO" ]]; then
       git clone "$REPO" "$PROJECT_ROOT/$PROJECT/$PROJECT"
